@@ -12,7 +12,11 @@ function changeName(){
     paragraph.classList.add("highlight");
     paragraph.innerText = "new text";
 }
-function clearpwd(){
+function clearpwd() {
     const pwdInput = document.getElementById("pwd");
-    console.log(pwdInput);
+    if (pwdInput.type === "password") {
+        pwdInput.type = "text"; 
+    } else {
+        pwdInput.type = "password";
+    }
 }
